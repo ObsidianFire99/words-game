@@ -1,0 +1,7 @@
+CHANGELOG
+
+V 0.1
+BROKEN
+-Nothing works except for home screen
+-Shell of Chambers
+-Strange Syntax Error Glitches
