@@ -1,5 +1,5 @@
-def startmessage():
-    print name
+def startmessage(name):
+    print "Ah, it is good to see you well,", name
     return None
 def chamberone():
     # Placeholder
@@ -37,10 +37,10 @@ def start():
     print ""
     print "A OneTen Production"
     def choice():
-        userchoice = raw_input("Type P for Play!!!")
-        if choice == "P":
-            username = raw_input("How do they call you in the lands you are from: "
-            ()
+        userchoice = raw_input("Type P to Play!!!")
+        if userchoice == "P":
+            username = raw_input("How do they call you in the lands you are from: ")
+            startmessage(username)
         else:
             choice()
     choice()
