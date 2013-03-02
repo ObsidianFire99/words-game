@@ -5,3 +5,8 @@ BROKEN
 -Nothing works except for home screen
 -Shell of Chambers
 -Strange Syntax Error Glitches
+
+V 1.0.0
+WORKING
+-Game Works
+-To Be Continued!!!
