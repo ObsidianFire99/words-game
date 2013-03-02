@@ -59,6 +59,7 @@ def startmessage():
     return None
 
 def chamberone():
+    print ""
     print "Chamber One"
     global wordcount
     if wordcount == 4:
@@ -81,6 +82,7 @@ def chamberone():
     return None
 
 def chambertwo():
+    print ""
     print "Chamber Two"
     global wordcount
     if wordcount == 2:
@@ -106,6 +108,7 @@ def chambertwo():
     return None
 
 def chamberthree():
+    print ""
     print "Chamber Three"
     global wordcount
     if wordcount == 6:
@@ -128,6 +131,7 @@ def chamberthree():
     return None
 
 def chamberfour():
+    print ""
     print "Chamber Four"
     global wordcount
     if wordcount == 5:
@@ -153,6 +157,7 @@ def chamberfour():
     return None
 
 def chamberfive():
+    print ""
     print "Chamber Five"
     global wordcount
     if wordcount == 9:
@@ -180,6 +185,7 @@ def chamberfive():
     return None
 
 def chambersix():
+    print ""
     print "Chamber Six"
     global wordcount
     if wordcount == 8:
@@ -203,6 +209,7 @@ def chambersix():
         chambersix()
     return None
 def chamberseven():
+    print ""
     print "Chamber Seven"
     global wordcount
     if wordcount == 1:
@@ -225,6 +232,7 @@ def chamberseven():
         chamberseven()
     return None
 def chambereight():
+    print ""
     print "Chamber Eight"
     global wordcount
     if wordcount == 7:
@@ -249,6 +257,7 @@ def chambereight():
         chambereight()
     return None
 def chambernine():
+    print ""
     print "Chamber Nine"
     global wordcount
     if wordcount == 3:
