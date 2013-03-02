@@ -127,7 +127,7 @@ def chamberthree():
         chambertwo()
     else:
         print "You can't even type in a letter correctly. Let's try this chamber again."
-        chamberfour()
+        chamberthree()
     return None
 
 def chamberfour():
