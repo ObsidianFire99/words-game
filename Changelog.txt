@@ -10,3 +10,8 @@ V 1.0.0
 WORKING
 -Game Works
 -To Be Continued!!!
+
+V 1.0.1
+WORKING
+-Newlines when switching Chambers
+-Bug Fixes
