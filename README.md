@@ -11,7 +11,7 @@ Licensed under the Creative Commons Attribution 3.0 Unported License
 
 ----------
 
-Version 1.0.1
+Version 1.1.0
 See Changelog for Details.
 
 ----------
