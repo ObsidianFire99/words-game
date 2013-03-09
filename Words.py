@@ -68,6 +68,8 @@ def chamberone():
         print "Word", world[0], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
@@ -91,6 +93,8 @@ def chambertwo():
         print "Word", world[1], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
@@ -117,6 +121,8 @@ def chamberthree():
         print "Word", world[2], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
@@ -140,6 +146,8 @@ def chamberfour():
         print "Word", world[3], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
@@ -166,7 +174,9 @@ def chamberfive():
         print "Word", world[4], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
-        finish()
+        if wordcount == 9:
+            finish()
+        wordcount = wordcount + 1
 
     else:
         print "This room is bigger than the others *Clang!* *OW!*"
@@ -194,6 +204,8 @@ def chambersix():
         print "Word", world[5], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
@@ -218,6 +230,8 @@ def chamberseven():
         print "Word", world[6], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
@@ -241,6 +255,8 @@ def chambereight():
         print "Word", world[7], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
@@ -266,6 +282,8 @@ def chambernine():
         print "Word", world[8], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
+        if wordcount == 9:
+            finish()
         wordcount = wordcount + 1
 
     else:
