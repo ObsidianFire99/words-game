@@ -5,6 +5,8 @@ import time
 import sys
 import random
 global username
+import WorldGen
+import resources
 username = "user"
 global wordcount
 wordcount = 1
@@ -17,7 +19,7 @@ def finish():
     time.sleep(3)
     print "To be Continued..."
     raw_input("Press Enter to Return to game mode. Read those Witty Comments You Missed!")
-    
+
 def startmessage():
     print "Owww... My Head Hurts"
     time.sleep(2)
@@ -62,15 +64,15 @@ def chamberone():
     print ""
     print "Chamber One"
     global wordcount
-    if wordcount == 4:
-        print "Word 4 Found"
+    if wordcount == world[0]:
+        print "Word", world[0], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
         print "What the heck? How can I know I find something if I can't see it?"
-        
+
     direction = raw_input("Type N to go North or E to go East: ")
     if direction == "N":
         chamberfour()
@@ -78,23 +80,23 @@ def chamberone():
         chambertwo()
     else:
         print "You can't even type in a letter correctly. Let's try this chamber again."
-        chamberone()    
+        chamberone()
     return None
 
 def chambertwo():
     print ""
     print "Chamber Two"
     global wordcount
-    if wordcount == 2:
-        print "Word 2 Found"
+    if wordcount == world[1]:
+        print "Word", world[1], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
         print "Yikes!!! Thats a skull!"
         print "Oh wait, it's just a rock. No words here though"
-        
+
     direction = raw_input("Type N to go North, E to go East, or W to go West: ")
     if direction == "N":
         chamberfive()
@@ -111,15 +113,15 @@ def chamberthree():
     print ""
     print "Chamber Three"
     global wordcount
-    if wordcount == 6:
-        print "Word 6 Found"
+    if wordcount == world[2]:
+        print "Word", world[2], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
         print "I'm surprised the ceiling on this room is still intact. If I jump it might come down on my head by the looks of it!"
-        
+
     direction = raw_input("Type N to go North or W to go West: ")
     if direction == "N":
         chambersix()
@@ -134,16 +136,16 @@ def chamberfour():
     print ""
     print "Chamber Four"
     global wordcount
-    if wordcount == 5:
-        print "Word 5 Found"
+    if wordcount == world[3]:
+        print "Word", world[3], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
         print "Yuk! A mouldy sandwich. It smells of the cheese my granny has in her socks."
         print "But there's no words. How hard can they be to find?"
-        
+
     direction = raw_input("Type N to go North, E to go East, or S to go South: ")
     if direction == "N":
         chamberseven()
@@ -160,16 +162,16 @@ def chamberfive():
     print ""
     print "Chamber Five"
     global wordcount
-    if wordcount == 9:
-        print "Word 9 Found"
+    if wordcount == world[4]:
+        print "Word", world[4], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         finish()
-        
+
     else:
         print "This room is bigger than the others *Clang!* *OW!*"
         print "And as my head just discovered, there are chains hanging from the ceiling!"
-        
+
     direction = raw_input("Type N to go North, E to go East, S to go South or W to go West: ")
     if direction == "N":
         chambereight()
@@ -188,12 +190,12 @@ def chambersix():
     print ""
     print "Chamber Six"
     global wordcount
-    if wordcount == 8:
-        print "Word 8 Found"
+    if wordcount == world[5]:
+        print "Word", world[5], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
         print "Words, Words, I hate Words."
         print "Cavemen had the right idea with their pictures!"
@@ -212,16 +214,16 @@ def chamberseven():
     print ""
     print "Chamber Seven"
     global wordcount
-    if wordcount == 1:
-        print "Word 1 Found"
+    if wordcount == world[6]:
+        print "Word", world[6], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
          print "I hope I don't die in here"
          print "I would hate to die, alone in the dark and the cold."
-        
+
     direction = raw_input("Type E to go East, or S to go South: ")
     if direction == "E":
         chambereight()
@@ -235,16 +237,16 @@ def chambereight():
     print ""
     print "Chamber Eight"
     global wordcount
-    if wordcount == 7:
-        print "Word 7 Found"
+    if wordcount == world[7]:
+        print "Word", world[7], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
         print "OH NO! I'm Trapped!"
         print "It's cobwebs... Wait I can cut them with this rock. Stupid Arachnida."
-        
+
     direction = raw_input("Type W to go West, E to go East, or S to go South: ")
     if direction == "W":
         chamberseven()
@@ -260,12 +262,12 @@ def chambernine():
     print ""
     print "Chamber Nine"
     global wordcount
-    if wordcount == 3:
-        print "Word 3 Found"
+    if wordcount == world[8]:
+        print "Word", world[8], "Found"
         word = words[wordcount - 1]
         wordlist.append(word)
         wordcount = wordcount + 1
-        
+
     else:
         print "I wonder where I can buy a postcard?"
         print "Dear Mom, I'm starving to death in a mouldy dungeon, hope you had a nice weekend, see you soon."
@@ -280,7 +282,7 @@ def chambernine():
         print "You can't even type in a letter correctly. Let's try this chamber again."
         chambernine()
     return None
-    
+
 def start():
     print "+-+-+-+-+-+-+-+-"*480
     inlogo = open('logo.txt', 'r')
@@ -295,6 +297,10 @@ def start():
         if userchoice == "P":
             global username
             username = raw_input("How do they call you in the lands you are from: ")
+            global world
+            world = list(WorldGen.customseed())
+            world.reverse()
+            #messages = list(resources.getmessage())
             skipin = raw_input("Would You like to skip the intro? (Y/N): ")
             if skipin == "Y":
                 chamberone()
@@ -303,5 +309,5 @@ def start():
         else:
             choice()
     choice()
-        
+
 start()
