@@ -22,9 +22,9 @@ def splitdig(num):
     return numlist[:]
 
 def getmessage():
-    infile = file(messages.txt, "r")
+    infile = open('messages.txt', 'r')
     messagelist = []
     for i in infile:
         messagelist.append(i)
-    close(infile)
+    infile.close()
     return messagelist[:]

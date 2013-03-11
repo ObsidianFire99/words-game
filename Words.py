@@ -73,7 +73,7 @@ def chamberone():
         wordcount = wordcount + 1
 
     else:
-        print "What the heck? How can I know I find something if I can't see it?"
+        print messages[0]
 
     direction = raw_input("Type N to go North or E to go East: ")
     if direction == "N":
@@ -98,8 +98,7 @@ def chambertwo():
         wordcount = wordcount + 1
 
     else:
-        print "Yikes!!! Thats a skull!"
-        print "Oh wait, it's just a rock. No words here though"
+        print messages[1]
 
     direction = raw_input("Type N to go North, E to go East, or W to go West: ")
     if direction == "N":
@@ -126,8 +125,7 @@ def chamberthree():
         wordcount = wordcount + 1
 
     else:
-        print "I'm surprised the ceiling on this room is still intact. If I jump it might come down on my head by the looks of it!"
-
+        print messages[2]
     direction = raw_input("Type N to go North or W to go West: ")
     if direction == "N":
         chambersix()
@@ -151,8 +149,7 @@ def chamberfour():
         wordcount = wordcount + 1
 
     else:
-        print "Yuk! A mouldy sandwich. It smells of the cheese my granny has in her socks."
-        print "But there's no words. How hard can they be to find?"
+        print messages[3]
 
     direction = raw_input("Type N to go North, E to go East, or S to go South: ")
     if direction == "N":
@@ -179,9 +176,7 @@ def chamberfive():
         wordcount = wordcount + 1
 
     else:
-        print "This room is bigger than the others *Clang!* *OW!*"
-        print "And as my head just discovered, there are chains hanging from the ceiling!"
-
+        print messages[4]
     direction = raw_input("Type N to go North, E to go East, S to go South or W to go West: ")
     if direction == "N":
         chambereight()
@@ -209,8 +204,7 @@ def chambersix():
         wordcount = wordcount + 1
 
     else:
-        print "Words, Words, I hate Words."
-        print "Cavemen had the right idea with their pictures!"
+        print messages[5]
     direction = raw_input("Type N to go North, W to go West, or S to go South: ")
     if direction == "N":
         chambernine()
@@ -235,8 +229,7 @@ def chamberseven():
         wordcount = wordcount + 1
 
     else:
-         print "I hope I don't die in here"
-         print "I would hate to die, alone in the dark and the cold."
+         print messages[6]
 
     direction = raw_input("Type E to go East, or S to go South: ")
     if direction == "E":
@@ -260,8 +253,7 @@ def chambereight():
         wordcount = wordcount + 1
 
     else:
-        print "OH NO! I'm Trapped!"
-        print "It's cobwebs... Wait I can cut them with this rock. Stupid Arachnida."
+        print messages[7]
 
     direction = raw_input("Type W to go West, E to go East, or S to go South: ")
     if direction == "W":
@@ -287,8 +279,7 @@ def chambernine():
         wordcount = wordcount + 1
 
     else:
-        print "I wonder where I can buy a postcard?"
-        print "Dear Mom, I'm starving to death in a mouldy dungeon, hope you had a nice weekend, see you soon."
+        print messages[8]
 
     direction = raw_input("Type W to go West, or S to go South: ")
 
@@ -318,7 +309,9 @@ def start():
             global world
             world = list(WorldGen.customseed())
             world.reverse()
-            #messages = list(resources.getmessage())
+            global messages
+            messages = list(resources.getmessage())
+            print ""
             skipin = raw_input("Would You like to skip the intro? (Y/N): ")
             if skipin == "Y":
                 chamberone()
