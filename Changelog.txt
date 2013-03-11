@@ -19,3 +19,7 @@ WORKING
 V.1.1.0
 WORKING
 -Random word generation with seeds
+
+V.1.1.1
+WORKING
+-Reads Messages from messages.txt
